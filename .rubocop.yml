@@ -1,0 +1,87 @@
+AllCops:
+  TargetRubyVersion: 2.5.3
+  Exclude:
+    - 'bundle/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'mock/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/*'
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'config.ru'
+    - 'lib/rails_admin/config/actions/new.rb'
+Rails:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedStyle: 'no_mixed_keys'
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/AndOr:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: 'double_quotes'
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Max: 20
+
+Metrics/ClassLength:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Rails/OutputSafety:
+  Enabled: false
+
+# FIXME: 挙動が変わってしまうのでルールを切っておく。
+#        徐々にdependentを整備していき、最終的にこのルールを有効化する。
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
