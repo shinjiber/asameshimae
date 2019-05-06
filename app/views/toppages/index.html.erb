@@ -1,0 +1,39 @@
+<header>
+  <div id='top-logo'>
+    <%= image_tag('title.jpg', alt:'朝飯前タイトルロゴ', id:'title-logo') %>
+  </div>
+  <nav id='navigation-menu' class='block'>
+    <ul id='menu-list'>
+      <li class='nav-item'><a href='#introduce'>top</a></li>
+      <li class='nav-item'><a href='#lookbook'>lookbook</a></li>
+      <li class='nav-item'><a href='#item'>item</a></li>
+      <li class='nav-item'><a href='#contact'>contact</a></li>
+    </ul>
+  </nav>
+
+  <div id='introduce' class='block'>
+    <h1 class='title'>What is Asameshimae??</h1>
+    <h3>Japanese street brand form Saitama</h3>
+    <h3><strong>"It"s easy to do everything before breakfast"</strong></h3>
+  </div>
+</header>
+
+<main>
+  <div id='lookbook' class='block'>
+    <h1 class='title'>Look-Book</h1>
+  </div>
+
+  <div id='item' class='block'>
+    <h1 class='title'>Items</h1>
+    <%= link_to 'Look more items =>', items_index_url %>
+  </div>
+</main>
+
+<footer>
+  <div id='contact' class='block'>
+    <h1>Contact</h1>
+    <%= render 'layouts/contact' %>
+  </div>
+  <p>&copy; Asameshimae</p>
+</footer>
+
