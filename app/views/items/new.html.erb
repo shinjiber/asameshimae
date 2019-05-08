@@ -1,0 +1,15 @@
+<%= form_with(model: @item) do |f| %>
+  <%= f.label :image, 'Item Image' %>
+  <%= f.file_field :image %>
+
+  <%= f.label :name, 'Item Name' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :price, 'Item price' %>
+  <%= f.text_field :price %>
+
+  <%= f.label :description, 'Description' %>
+  <%= f.text_field :description %>
+
+  <%= f.submit 'Upload!' %>
+<% end %>

@@ -1,52 +1,25 @@
 import React from 'react';
-import ItemsCarousel from 'react-items-carousel';
-import range from 'lodash/range';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
-export default class Slide extends React.Component {
-  componentWillMount() {
-    this.setState({
-      children: [],
-      activeItemIndex: 0,
-    });
-
-    setTimeout(() => {
-      this.setState({
-        children: createChildren(20),
-      })
-    }, 100);
-  }
-}
-
-createChildren = n => range(n).map(i => <div key={i} style={{height: 200, background: '#333'}}>{i}</div>);
-
-changeActiveItem = (activeItemIndex) => this.setState({ activeItemIndex });
-
-render() {
-  const {
-    activeItemIndex,
-    children,
-  } = this.state;
-
-  return (
-    <ItemsCarousel
-    // Placeholder configurations
-      enablePlaceholder
-      numberOfPlaceholderItems = {5}
-      minimumPlaceholderTime = {1000}
-      placehokderItem = {<div style={{height: 200, background: '#900'}}>Placehokder</div>}
-
-      // Carousel configurations
-      numberOfCards = {3}
-      gutter = {12}
-      showSlither = {true}
-      freeScrolling = {false}
-
-      // Active item configurations
-      requestToChangeActive = {this.changeActiveItem}
-      activeItemsIndex = {activeItemsIndex}
-      activePosition = {false}
+export default class extends React.Component {
+  render() {
+    return (
+      <CarouselProvider
+        naturalSlideWith={100}
+        naturalSlideHeight={125}
+        totalSlides={5}
       >
-        {children}
-      </ItemsCarousel>
-  );
+        <Slider>
+          <Slide index={0}>I am the first Slide</Slide>
+          <Slide index={1}>I am the second Slide</Slide>
+          <Slide index={2}>I am the third Slide</Slide>
+          <Slide index={3}>I am the fourth Slide</Slide>
+          <Slide index={4}>I am the fifth Slide</Slide>
+        </Slider>
+        <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext>
+      </CarouselProvider>
+    );
+  }
 }
