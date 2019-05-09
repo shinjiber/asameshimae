@@ -10,6 +10,7 @@
   </ul>
 </nav>
 
-<% @items.each do |item| %>
-  <%= item.image %>
+<%= @items.each do |item| %>
+<%= image_tag("#{item.image}", :size => "300x300") %>
+<%= item.name%>
 <% end %>

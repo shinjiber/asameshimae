@@ -175,6 +175,7 @@ GEM
       railties (>= 3.2)
       tilt
     regexp_parser (1.4.0)
+    rmagick (3.1.0)
     rubocop (0.68.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -254,6 +255,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.3)
   react-rails
+  rmagick (= 3.1.0)
   rubocop
   sass-rails (~> 5.0)
   selenium-webdriver

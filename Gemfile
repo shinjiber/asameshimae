@@ -68,3 +68,4 @@ gem 'webpacker'
 gem 'react-rails'
 
 gem 'carrierwave'
+gem 'rmagick', '3.1.0'
