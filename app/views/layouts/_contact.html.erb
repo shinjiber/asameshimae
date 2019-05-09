@@ -1,11 +1,17 @@
 <%= form_with(model: @user, method: :create)  do |f| %>
-  <%= f.label :name, 'Name' %>
-  <%= f.text_field :name, class: 'field' %>
-
-  <%= f.label :email, 'Email' %>
-  <%= f.text_field :email, class: 'field' %>
-
-  <%= f.label :password, "Password" %>
-  <%= f.password_field :password, class: 'field' %>
-  <%= f.submit 'Submit', class: 'button'%>
+  <p>
+    <%= f.label :name, 'Name' %>
+    <%= f.text_field :name, class: 'field' %>
+  </p>
+  <p>
+    <%= f.label :email, 'Email' %>
+    <%= f.text_field :email, class: 'field' %>
+  </p>
+  <p>
+    <%= f.label :password, "Password" %>
+    <%= f.password_field :password, class: 'field' %>
+  </p>
+  <p>
+    <%= f.submit 'Submit', class: 'button'%>
+  </p>
 <% end %>

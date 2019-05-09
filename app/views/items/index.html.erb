@@ -3,14 +3,16 @@
 
 <nav id='navigation-menu' class='block'>
   <ul id='menu-list'>
-    <li><a href='#introduce'>top</a></li>
-    <li><a href='#lookbook'>lookbook</a></li>
-    <li><a href='#item'>item</a></li>
-    <li><a href='#contact'>contact</a></li>
+    <li><a href='#'><%= link_to "top", root_url %></a></li>
+    <li><a href='#'><%= link_to "lookbook", root_url, :id => "lookbook" %></a></li>
+    <li><a href='#'><%= link_to "item", root_url, :id => "item" %></a></li>
+    <li><a href='#'><%= link_to "contact", root_url, :id => "contact" %></a></li>
   </ul>
 </nav>
 
 <% @items.each do |item| %>
 <%= image_tag("#{item.image}", :size => "300x300") %>
-<%= item.name%>
+<p>Item Name: <%= item.name %></p>
+<p>Price: ¥<%= item.price %></p>
+<p>Item-description: <%= item.description %></p>
 <% end %>
